@@ -1,0 +1,14 @@
+{
+    "questions":[
+        {"question":"Why is it a dumb idea to use the same password on mutiple sites?", 
+            "incorrect":"Because I lose access to multiple accounts if I forget my password.", 
+            "correct":"Because if a hacker obtains the password, he or she can get into my more sensitive accounts, such as my e-mail or bank account."},
+
+        {"question":"Why is your e-mail account one of the most sensitive accounts you got?",
+            "incorrect":"Because it is one of the most frequently used accounts of mine.", 
+            "correct":"Because if a hacker gets access to my e-mail account, he or she can use the reset function on other sites to get access to those too."},
+        {"question":"Is it a good idea to write your password on a piece of paper to remember it?", 
+            "incorrect":"Absolutly not!", 
+            "correct":"If it helps me remember a more complex password - yes."}
+    ]    
+}
