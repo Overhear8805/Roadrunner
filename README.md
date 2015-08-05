@@ -15,4 +15,5 @@ It's my first game, programmed in Python using pygame. A simple side scrolling r
 
 
 Licensed under GNU GPLv3
+
 Simon Cedergren Malmqvist
