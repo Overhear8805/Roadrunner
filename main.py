@@ -248,7 +248,7 @@ def main():
             if event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN and not display_dialog and not is_game_over:
                 jump()
                 
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            if event.type == pygame.KEYDOWN and (event.key == pygame.K_q or event.key == pygame.K_ESCAPE):
                 active_game = False
 
             if event.type == pygame.KEYDOWN and event.key == pygame.K_r and is_game_over:
