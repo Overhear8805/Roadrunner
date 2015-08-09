@@ -1,6 +1,11 @@
 import json
 from pprint import pprint
 
+'
+ A class that fetches questions (and corresponding answers) from a JSON-file.
+ 
+'
+
 class Question_Loader():
     questions_json = None
     counter = -1
@@ -10,6 +15,7 @@ class Question_Loader():
         with open("questions.json") as questions_file:
             self.questions_json = json.load(questions_file)
 
+    # Returns the next question. Will start to repeat questions when it has read every question.
     def get_next_question(self):
         self.counter += 1
 
@@ -18,8 +24,3 @@ class Question_Loader():
         
         question = self.questions_json["questions"][self.counter]
         return (question["question"], question["correct"], question["incorrect"])
-
-    def check_answer(self, guess):
-        pass
-        # Check if guess (1, x, 2) is the same as the answer in the JSON file
-

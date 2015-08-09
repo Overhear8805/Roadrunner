@@ -1,4 +1,11 @@
 import pygame
+
+'
+ A class that handles the life meter.
+ It handles both the logical (counts the lifes) and the graphical properties.
+
+'
+
 class Life_Meter(pygame.sprite.Sprite):
     rect = None
     sprite = None

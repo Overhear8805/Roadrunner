@@ -1,5 +1,13 @@
 import pygame
 import random
+
+'
+ A class representing an obsticle on the road.
+ Collision detection is done in main.py, but this
+ class holds the neccesary properties and methods
+ to make it possible to detect.
+
+'
 class Obsticle(pygame.sprite.Sprite):
     rect = None
     sprite = None

@@ -2,6 +2,11 @@ import pygame
 import random
 from itertools import chain
 
+'
+ Class responsible for showing the question dialog
+ and randomizing the order of the answers.
+ 
+'
 class Question_Dialog(pygame.sprite.Sprite):
     font = None
     rect = None

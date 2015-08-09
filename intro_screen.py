@@ -1,4 +1,9 @@
 import pygame
+'
+ A "dirty" hack. Do not learn from this!
+ It paints another background with some text on it.
+
+'
 class Intro_Screen(pygame.sprite.Sprite):
     rect = None
     sprite = None

@@ -1,12 +1,15 @@
 #!/usr/bin/python2
 '''
-IT security game
+An IT security game in form of a run'n'jump side scroller.
 
 Simon Cedergren Malmqvist
 Licensed under GNU GPLv3
 
 Python 2.7
 pygame
+
+TODO:
+Cut down drastically on the use of global variables. They are left from a time when this wasn't written as object oriented code.
 
 '''
 import pygame 
@@ -61,6 +64,7 @@ question_dialog = Question_Dialog(dialog_sprite)
 life_meter = Life_Meter(heart_sprite)
 intro_screen = Intro_Screen(into_sprite)
 
+# Move the background to make it look like the car is moving.
 def move_forward():
     global SPEED 
     # Call it gears if you'd like!
@@ -81,20 +85,20 @@ def generate_obsticle():
     global has_collided_already 
     global TIME_SINCE_LAST_OBSTICLE 
 
-    if (obsticle.x + 128) <= 0:
-        sprite_rand = random.randint(0,3)
-        if sprite_rand == 0:
+    if (obsticle.x + 128) <= 0: # Make sure there's no obsticles on the screen.
+        sprite_rand = random.randint(0,3) # Pick a random number.
+        if sprite_rand == 0: # Each sprite has its own number. If sprite_rand is 0, the tree sprite will show.
             obsticle = Obsticle(tree_sprite)
-        elif sprite_rand == 1:
+        elif sprite_rand == 1: # If sprite_rand is 1, the box sprite will show instead, and so on...
             obsticle = Obsticle(box_sprite)
         elif sprite_rand == 2:
             obsticle = Obsticle(sign_sprite)
         elif sprite_rand == 3:
             obsticle = Obsticle(barrel_sprite)
 
-        obsticle.reset()
-        has_collided_already = False
-        TIME_SINCE_LAST_OBSTICLE = pygame.time.get_ticks()
+        obsticle.reset() # Moves the obsticle further away (to the right side) on the screen.
+        has_collided_already = False # This is to make sure that an obsticle only triggers *one* dialog.
+        TIME_SINCE_LAST_OBSTICLE = pygame.time.get_ticks() 
 
 
 def update_values(delta):
@@ -224,7 +228,10 @@ def main():
     active_game = True
     is_game_over = False
 
+    # The game loop!
     while active_game:
+
+        # This is a buffer that reads user input and does a corresponding thing depending on what the user does.
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and not display_dialog and not is_game_over:
                 generate_obsticle()

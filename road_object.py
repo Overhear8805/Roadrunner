@@ -1,4 +1,10 @@
 import pygame
+
+'
+ A class that represents the road. For now it does almost nothing.
+
+'
+
 class Road_Object(pygame.sprite.Sprite):
     rect = None
     sprite = None

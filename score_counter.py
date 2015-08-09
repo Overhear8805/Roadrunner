@@ -1,4 +1,8 @@
 import pygame
+'
+ A class that handles the graphical score counter.
+
+'
 
 class ScoreCounter(pygame.font.Font):
     score = None

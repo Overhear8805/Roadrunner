@@ -1,4 +1,12 @@
 import pygame
+'
+
+ A class representing a car. The car itself is never 
+ moving forward (the background does that) but it 
+ holds the ability to jump.
+
+'
+
 class CarObject(pygame.sprite.Sprite):
     rect = None
     sprite = None
