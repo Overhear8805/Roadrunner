@@ -5,6 +5,8 @@ Depends on pygame, and thus Python 2.7.
 
 It's my first game, programmed in Python using pygame. A simple side scrolling run'n'jump with a learning element to it.
 
+I released it as free and open source software hoping that someone one day will stumble over it when they need some sample code while learning.
+
 ![Roadrunner in action](http://i.imgur.com/wvq9Nuz.png)
 
 
